@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "https://netflix-clone-5pqc.onrender.com/api/v1/user";
+const baseUrl = "https://netmct.onrender.com/api/v1/user";
 // const baseUrl = "http://localhost:10000/api/v1/user";
 
 export const signUp = async (userData) => {
