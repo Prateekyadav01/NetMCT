@@ -4,7 +4,7 @@
   "description": "Netflix clone backend",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -12,7 +12,7 @@
     "api",
     "backend"
   ],
-  "author": "Lokesh Kataria",
+  "author": "Prateek Yadav",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
