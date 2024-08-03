@@ -19,7 +19,7 @@ app.use(
   cors({
     origin: (origin, callback) => {
       // const allowedOrigins = 'https://net-mct.vercel.app';
-      const allowedOrigins = 'https://net-mct.vercel.app/';
+      const allowedOrigins = 'https://net-mct.vercel.app';
       if (!origin || allowedOrigins.indexOf(origin) !== -1) {
         callback(null, true);
       } else {
