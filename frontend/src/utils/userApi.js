@@ -50,6 +50,7 @@ export const signOut = async () => {
 
 export const authenticateUser = async () => {
   try {
+    console.log("goinf in authenticateUser");
     const res = await axios.get(`${baseUrl}/authenticate`, {
       withCredentials: true,
     });
