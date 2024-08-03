@@ -1,10 +1,11 @@
 import axios from "axios";
 
 const baseUrl = "https://netmct.onrender.com/api/v1/user";
-// const baseUrl = "http://localhost:10000/api/v1/user";
+// const baseUrl = "http://localhost:3000/api/v1/user";
 
 export const signUp = async (userData) => {
   try {
+    console.log(userData);
     const response = await axios.post(`${baseUrl}/signup`, userData);
     return response.data;
   } catch (error) {
@@ -20,7 +21,7 @@ export const signIn = async (userData) => {
       headers: {
         "Content-Type": "application/json",
       },
-      withCredentials: true,
+    //  withCredentials: true,
     });
     const data = response.data;
     console.log(data);
