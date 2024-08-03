@@ -23,21 +23,22 @@ const Login = () => {
   const { loginEmail, loginPass, isFetching } = useSelector(
     (state) => state.auth
   );
+  console.log(loginEmail,loginPass,isFetching);
   const navigateTo = useNavigate();
-  useEffect(() => {
-    const getUser = async () => {
-      const data = await authenticateUser();
-      if (data.success === true) {
-        dispatch(setUser(data.user));
-        dispatch(setIsAuthenticated(true));
-        navigateTo("/home");
-      } else {
-        dispatch(setUser(null));
-        dispatch(setIsAuthenticated(false));
-      }
-    };
-    getUser();
-  }, [dispatch]);
+  // // useEffect(() => {
+  // //   const getUser = async () => {
+  // //     const data = await authenticateUser();
+  // //     if (data.success === true) {
+  // //       dispatch(setUser(data.user));
+  // //       dispatch(setIsAuthenticated(true));
+  // //       navigateTo("/home");
+  // //     } else {
+  // //       dispatch(setUser(null));
+  // //       dispatch(setIsAuthenticated(false));
+  // //     }
+  // //   };
+  // //   getUser();
+  // // }, [dispatch]);
   return (
     <div
       className="w-full min-h-[100vh] h-full bg-no-repeat bg-cover flex flex-col items-center relative"

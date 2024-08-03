@@ -15,6 +15,7 @@ export const signUp = async (userData) => {
 
 export const signIn = async (userData) => {
   try {
+    console.log(userData);
     const response = await axios.post(`${baseUrl}/signin`, userData, {
       headers: {
         "Content-Type": "application/json",
@@ -22,6 +23,7 @@ export const signIn = async (userData) => {
       withCredentials: true,
     });
     const data = response.data;
+    console.log(data);
     localStorage.setItem("netflixUser", JSON.stringify(data.user));
     return { ...response.data, user: data.user };
   } catch (error) {
